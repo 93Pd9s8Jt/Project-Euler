@@ -4,7 +4,7 @@ def getFactorSum(n):
     if n in factorsums:
         return factorsums[n]
     factors = list(chain(*[[i, n//i] for i in range(1,int(n**0.5)+1) if n%i == 0]))
-    list(set(factors)) # remove duplicates e.g. squares
+    factors = list(set(factors)) # remove duplicates e.g. squares
     factors.remove(n)
     total = sum(factors)
     if createdict:
